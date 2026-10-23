@@ -1,0 +1,43 @@
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* chart + accent colours shared by Recharts and components (light) */
+  --ct-primary: #e5769f;
+  --ct-donut-pink: #f8a8c0;
+  --ct-donut-green: #8fce9e;
+  --ct-donut-blue: #a3cbee;
+  --ct-donut-amber: #f7cc7d;
+  --ct-bar-track: #f0e3e9;
+  --ct-bar-fill: #ee8fb0;
+  --ct-card-pink: #fad9e7;
+  --ct-card-pink-alt: #fbe3ed;
+  --ct-card-green: #e3f3e6;
+  --ct-card-blue: #dcebfa;
+}
+
+
+html {
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-blush-50 text-ink antialiased;
+}
+
+
+.tabular-nums {
+  font-feature-settings: "tnum";
+}
+
+/* Thin pink scrollbar to match the theme */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ct-bar-fill) transparent;
+}

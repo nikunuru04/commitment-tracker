@@ -1,0 +1,23 @@
+name: commitment-tracker
+
+services:
+  app:
+    build: .
+    image: commitment-tracker:latest
+    container_name: commitment-tracker-app
+    restart: unless-stopped
+    ports:
+      - "2620:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATA_DIR: /data
+      STATIC_DIR: /app/static
+      TZ: Asia/Kuala_Lumpur
+    volumes:
+      - data:/data
+
+volumes:
+  data:
+    name: commitment-tracker-data
